@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,10 @@
   <link rel="stylesheet" href="assets/lib/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 70px;
+    }
   </style>
 </head>
 
@@ -59,34 +63,38 @@
     <section class="py-5 bg-body-tertiary" id="fitur">
       <div class="container">
         <h2 class="text-center">Fitur Unggulan Sakuin</h2>
-        <p class="text-center text-body-secondary mb-4">Semua yang kamu butuhkan untuk mengatur uang saku, di satu tempat.</p>
+        <p class="text-center text-body-secondary mb-4">Semua yang kamu butuhkan untuk mengatur uang saku, di satu
+          tempat.</p>
 
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="card h-100 text-center"><div class="card-body p-4">
+        <div class="cards">
+          <div class="card text-center">
+            <div class="card-body p-4">
               <i class="bi bi-arrow-left-right fs-1 text-success"></i>
               <h5 class="mt-2">Catat Transaksi</h5>
-              <p class="text-body-secondary mb-0">Catat pemasukan dan pengeluaran harian dengan cepat, kapan saja dan di mana saja.</p>
-            </div></div>
+              <p class="text-body-secondary mb-0">Catat pemasukan dan pengeluaran harian dengan cepat, kapan saja dan di
+                mana saja.</p>
+            </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100 text-center"><div class="card-body p-4">
+          <div class="card text-center">
+            <div class="card-body p-4">
               <i class="bi bi-bullseye fs-1 text-success"></i>
               <h5 class="mt-2">Atur Anggaran</h5>
-              <p class="text-body-secondary mb-0">Tentukan batas pengeluaran tiap kategori agar uang saku tidak cepat habis.</p>
-            </div></div>
+              <p class="text-body-secondary mb-0">Tentukan batas pengeluaran tiap kategori agar uang saku tidak cepat
+                habis.</p>
+            </div>
           </div>
-          <div class="col-md-4">
-            <div class="card h-100 text-center"><div class="card-body p-4">
+          <div class="card text-center">
+            <div class="card-body p-4">
               <i class="bi bi-bar-chart-line fs-1 text-success"></i>
               <h5 class="mt-2">Laporan Keuangan</h5>
-              <p class="text-body-secondary mb-0">Lihat ringkasan dan grafik keuanganmu untuk membantu mengambil keputusan yang tepat.</p>
-            </div></div>
+              <p class="text-body-secondary mb-0">Lihat ringkasan dan grafik keuanganmu untuk membantu mengambil
+                keputusan yang tepat.</p>
+            </div>
           </div>
         </div>
 
         <div class="text-center mt-4">
-          <a class="btn btn-success me-2" href="auth/register.html">Daftar Gratis</a>
+          <a class="btn btn-outline-success me-2" href="auth/register.html">Daftar Gratis</a>
           <a class="btn btn-outline-success" href="auth/login.html">Sudah punya akun? Masuk</a>
         </div>
       </div>
@@ -98,22 +106,25 @@
         <h2 class="text-center">Tim PBL Sakuin</h2>
         <p class="text-center text-body-secondary mb-4">Orang-orang di balik Sakuin.</p>
 
-        <div class="row g-3 justify-content-center mx-auto" style="max-width: 680px">
-          <div class="col-md-6">
-            <div class="card h-100 text-center"><div class="card-body p-4">
-              <img src="assets/img/pasfira.jpeg" class="rounded-circle mb-3" width="110" height="110" style="object-fit: cover" alt="Safira Maharani Putri">
+        <div class="tim">
+          <div class="card text-center">
+            <div class="card-body p-4">
+              <img src="assets/img/pasfira.jpeg" class="rounded-circle mb-3" width="110" height="110"
+                style="object-fit: cover" alt="Safira Maharani Putri">
               <h6 class="mb-0">Safira Maharani Putri</h6>
               <div class="text-success fw-semibold">Ketua Tim</div>
               <small class="text-body-secondary">NIM 3312601033</small>
-            </div></div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <div class="card h-100 text-center"><div class="card-body p-4">
-              <img src="assets/img/pasgizel.jpg" class="rounded-circle mb-3" width="110" height="110" style="object-fit: cover" alt="Ghizella Rahma Azzahra">
+
+          <div class="card text-center">
+            <div class="card-body p-4">
+              <img src="assets/img/pasgizel.jpg" class="rounded-circle mb-3" width="110" height="110"
+                style="object-fit: cover" alt="Ghizella Rahma Azzahra">
               <h6 class="mb-0">Ghizella Rahma Azzahra</h6>
               <div class="text-success fw-semibold">Anggota Tim</div>
               <small class="text-body-secondary">NIM 3312601032</small>
-            </div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -135,7 +146,8 @@
           <div class="invalid-feedback">Masukkan alamat email yang valid.</div>
 
           <label class="form-label mt-3" for="pesan">Pesan</label>
-          <textarea class="form-control" id="pesan" name="pesan" rows="4" required placeholder="Tulis pesan Anda di sini..."></textarea>
+          <textarea class="form-control" id="pesan" name="pesan" rows="4" required
+            placeholder="Tulis pesan Anda di sini..."></textarea>
           <div class="invalid-feedback">Pesan wajib diisi.</div>
 
           <button class="btn btn-success mt-3" type="submit">Kirim Pesan</button>
@@ -151,4 +163,5 @@
   <script src="assets/lib/bootstrap.bundle.min.js"></script>
   <script src="assets/js/landing.js"></script>
 </body>
+
 </html>
