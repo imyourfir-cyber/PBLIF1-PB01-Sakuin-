@@ -1,0 +1,142 @@
+/* style.css
+   Hampir semua tampilan memakai Bootstrap.
+   File ini hanya berisi tambahan kecil milik Sakuin. */
+
+/* Menu berwarna hijau (bawaan Bootstrap: biru) */
+.nav-pills {
+  --bs-nav-link-color: var(--bs-body-color);
+  --bs-nav-link-hover-color: #198754;
+  --bs-nav-pills-link-active-bg: #198754;
+}
+
+/* Kerangka halaman aplikasi: sidebar di kiri, konten di kanan */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  flex-shrink: 0;
+  background: var(--bs-tertiary-bg);
+  border-right: 1px solid var(--bs-border-color);
+}
+
+.sidebar .nav {
+  flex: 1;   /* menu mengisi tinggi sidebar, jadi Pengaturan bisa turun ke bawah */
+}
+
+.konten {
+  flex: 1;
+  min-width: 0; /* supaya tabel lebar tidak mendorong halaman */
+}
+
+/* Foto bulat (topbar dan halaman profil) */
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-besar {
+  width: 110px;
+  height: 110px;
+}
+
+/* Halaman login / daftar: kartu di tengah layar */
+.auth-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layar kecil: sidebar pindah ke atas */
+@media (max-width: 767px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; }
+  .sidebar .nav { flex-direction: row !important; flex-wrap: wrap; }
+  .sidebar .mt-auto { margin-top: 0 !important; }
+}
+
+
+/* ===== Ciri khas Sakuin: hijau + emas (hanya pengaturan warna & sudut) ===== */
+
+:root {
+  --emas: #c9993a;
+  --hijau-tua: #0e6b4d;
+}
+
+/* Judul memakai huruf serif */
+h1, h2, h3, h4, h5 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Kartu: sudut lebih bulat + bayangan lembut */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(14, 107, 77, .08);
+}
+
+/* Tombol bulat, tombol utama berwarna hijau tua */
+.btn {
+  border-radius: 999px;
+}
+
+.btn-success {
+  --bs-btn-bg: var(--hijau-tua);
+  --bs-btn-border-color: var(--hijau-tua);
+  --bs-btn-hover-bg: #0a5039;
+  --bs-btn-hover-border-color: #0a5039;
+  --bs-btn-active-bg: #0a5039;
+}
+
+/* Sidebar: gradien hijau lembut, menu aktif beraksen emas */
+.sidebar {
+  background: linear-gradient(180deg, rgba(31, 165, 122, .14), rgba(201, 153, 58, .08));
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--hijau-tua);
+}
+
+.nav-pills .nav-link {
+  border-radius: 999px;
+}
+
+.nav-pills .nav-link.active {
+  box-shadow: inset 4px 0 0 var(--emas);
+}
+
+/* Garis emas di bawah topbar dan kartu saldo */
+.konten > header {
+  border-bottom: 2px solid var(--emas) !important;
+}
+
+.card.border-success {
+  border-color: var(--emas) !important;
+  box-shadow: 0 4px 18px rgba(201, 153, 58, .25);
+}
+
+/* Landing page: hero bergradien hijau */
+#beranda {
+  background: linear-gradient(160deg, rgba(31, 165, 122, .2), rgba(201, 153, 58, .12));
+}
+
+#beranda h1, .auth-wrap h1 {
+  color: var(--hijau-tua) !important;
+}
+
+[data-bs-theme="dark"] #beranda h1,
+[data-bs-theme="dark"] .auth-wrap h1 {
+  color: #f0cf7c !important;
+}
+
+/* Saklar (switch) berwarna hijau saat aktif */
+.form-check-input:checked {
+  background-color: var(--hijau-tua);
+  border-color: var(--hijau-tua);
+}
