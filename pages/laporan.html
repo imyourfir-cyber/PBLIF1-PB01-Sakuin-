@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laporan Keuangan – Sakuin</title>
+  <link rel="icon" href="../assets/img/logo.png">
+  <link rel="stylesheet" href="../assets/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-halaman="laporan">
+  <div class="layout">
+
+    <!-- SIDEBAR: menu di sisi kiri -->
+    <aside class="sidebar p-3">
+      <a href="dashboard.html" class="d-flex align-items-center gap-2 text-decoration-none text-success mb-4">
+        <img src="../assets/img/logo.png" width="36" alt="">
+        <b class="fs-4">Sakuin</b>
+      </a>
+
+      <nav class="nav nav-pills flex-column gap-1">
+        <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+        <a class="nav-link" href="transaksi.html"><i class="bi bi-arrow-left-right me-2"></i>Transaksi</a>
+        <a class="nav-link" href="kategori.html"><i class="bi bi-tags me-2"></i>Kategori</a>
+        <a class="nav-link" href="anggaran.html"><i class="bi bi-pie-chart me-2"></i>Anggaran</a>
+        <a class="nav-link" href="tabungan.html"><i class="bi bi-piggy-bank me-2"></i>Tabungan</a>
+        <a class="nav-link active" href="laporan.html"><i class="bi bi-file-earmark-text me-2"></i>Laporan</a>
+        <a class="nav-link mt-auto" href="pengaturan.html"><i class="bi bi-gear me-2"></i>Pengaturan</a>
+      </nav>
+    </aside>
+
+    <div class="konten">
+
+      <!-- TOPBAR: judul halaman dan menu pengguna -->
+      <header class="d-flex justify-content-between align-items-center border-bottom px-4 py-3">
+        <h4 class="m-0">Laporan Keuangan</h4>
+
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center gap-2 text-decoration-none text-body dropdown-toggle" data-bs-toggle="dropdown">
+            <img id="foto-user" class="avatar" alt="Foto">
+            <span id="nama-user" class="fw-semibold"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li class="px-3 py-2">
+              <b id="menu-nama"></b><br>
+              <small class="text-body-secondary" id="menu-username"></small>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+            <li><a class="dropdown-item" href="pengaturan.html">Pengaturan</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="../auth/login.html?logout=1">Logout</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- ISI HALAMAN -->
+      <main class="p-4">
+        <!-- Filter laporan -->
+        <div class="card mb-3"><div class="card-body">
+          <div class="nav nav-pills mb-3" id="tab-jenis">
+            <button class="nav-link" data-jenis="Pemasukan">Pemasukan</button>
+            <button class="nav-link" data-jenis="Tabungan">Tabungan</button>
+          </div>
+
+          <form class="row g-2" id="form-laporan">
+            <div class="col-md-3"><input class="form-control" type="date" name="dari" title="Dari tanggal"></div>
+            <div class="col-md-3"><input class="form-control" type="date" name="sampai" title="Sampai tanggal"></div>
+            <div class="col-md-4"><select class="form-select" name="pilihan" id="pilihan"></select></div>
+            <div class="col-md-2 d-grid"><button class="btn btn-success">Tampilkan</button></div>
+          </form>
+        </div></div>
+
+        <!-- Hasil laporan (diisi laporan.js) -->
+        <div id="hasil"></div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="../assets/lib/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/laporan.js"></script>
+</body>
+</html>
