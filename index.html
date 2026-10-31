@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sakuin – Kelola Uang Saku dengan Mudah</title>
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/lib/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 text-success fw-bold" href="#beranda">
+        <img src="assets/img/logo.png" width="34" alt="">Sakuin
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav align-items-md-center gap-md-1">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fitur">Fitur</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tim">Tim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-secondary btn-sm" id="tombol-tema" aria-label="Ganti tema"></button>
+          </li>
+          <li class="nav-item ms-md-2 mt-2 mt-md-0">
+            <a class="btn btn-success" href="auth/login.html">Buka Aplikasi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="text-center py-5" id="beranda">
+      <div class="container py-4">
+        <img src="assets/img/logo.png" width="110" alt="Logo Sakuin">
+        <h1 class="display-5 fw-bold text-success mt-2">Selamat Datang di Sakuin</h1>
+        <p class="lead text-body-secondary">Catat, atur, dan pantau keuangan sakumu dengan lebih mudah dan cerdas!</p>
+        <a class="btn btn-outline-success btn-lg mt-2" href="#fitur">Pelajari Lebih Lanjut</a>
+      </div>
+    </section>
+
+    <!-- FITUR -->
+    <section class="py-5 bg-body-tertiary" id="fitur">
+      <div class="container">
+        <h2 class="text-center">Fitur Unggulan Sakuin</h2>
+        <p class="text-center text-body-secondary mb-4">Semua yang kamu butuhkan untuk mengatur uang saku, di satu tempat.</p>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="card h-100 text-center"><div class="card-body p-4">
+              <i class="bi bi-arrow-left-right fs-1 text-success"></i>
+              <h5 class="mt-2">Catat Transaksi</h5>
+              <p class="text-body-secondary mb-0">Catat pemasukan dan pengeluaran harian dengan cepat, kapan saja dan di mana saja.</p>
+            </div></div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 text-center"><div class="card-body p-4">
+              <i class="bi bi-bullseye fs-1 text-success"></i>
+              <h5 class="mt-2">Atur Anggaran</h5>
+              <p class="text-body-secondary mb-0">Tentukan batas pengeluaran tiap kategori agar uang saku tidak cepat habis.</p>
+            </div></div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 text-center"><div class="card-body p-4">
+              <i class="bi bi-bar-chart-line fs-1 text-success"></i>
+              <h5 class="mt-2">Laporan Keuangan</h5>
+              <p class="text-body-secondary mb-0">Lihat ringkasan dan grafik keuanganmu untuk membantu mengambil keputusan yang tepat.</p>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a class="btn btn-success me-2" href="auth/register.html">Daftar Gratis</a>
+          <a class="btn btn-outline-success" href="auth/login.html">Sudah punya akun? Masuk</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIM -->
+    <section class="py-5" id="tim">
+      <div class="container">
+        <h2 class="text-center">Tim PBL Sakuin</h2>
+        <p class="text-center text-body-secondary mb-4">Orang-orang di balik Sakuin.</p>
+
+        <div class="row g-3 justify-content-center mx-auto" style="max-width: 680px">
+          <div class="col-md-6">
+            <div class="card h-100 text-center"><div class="card-body p-4">
+              <img src="assets/img/pasfira.jpeg" class="rounded-circle mb-3" width="110" height="110" style="object-fit: cover" alt="Safira Maharani Putri">
+              <h6 class="mb-0">Safira Maharani Putri</h6>
+              <div class="text-success fw-semibold">Ketua Tim</div>
+              <small class="text-body-secondary">NIM 3312601033</small>
+            </div></div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 text-center"><div class="card-body p-4">
+              <img src="assets/img/pasgizel.jpg" class="rounded-circle mb-3" width="110" height="110" style="object-fit: cover" alt="Ghizella Rahma Azzahra">
+              <h6 class="mb-0">Ghizella Rahma Azzahra</h6>
+              <div class="text-success fw-semibold">Anggota Tim</div>
+              <small class="text-body-secondary">NIM 3312601032</small>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="py-5 bg-body-tertiary" id="kontak">
+      <div class="container">
+        <h2 class="text-center">Hubungi Kami</h2>
+        <p class="text-center text-body-secondary mb-4">Ada pertanyaan atau saran? Kirim pesan ke kami.</p>
+
+        <form class="card card-body mx-auto needs-validation" id="form-kontak" style="max-width: 520px" novalidate>
+          <label class="form-label" for="nama">Nama Lengkap</label>
+          <input class="form-control" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+          <div class="invalid-feedback">Nama wajib diisi.</div>
+
+          <label class="form-label mt-3" for="email">Alamat Email</label>
+          <input class="form-control" id="email" name="email" type="email" required placeholder="Masukkan email Anda">
+          <div class="invalid-feedback">Masukkan alamat email yang valid.</div>
+
+          <label class="form-label mt-3" for="pesan">Pesan</label>
+          <textarea class="form-control" id="pesan" name="pesan" rows="4" required placeholder="Tulis pesan Anda di sini..."></textarea>
+          <div class="invalid-feedback">Pesan wajib diisi.</div>
+
+          <button class="btn btn-success mt-3" type="submit">Kirim Pesan</button>
+          <div class="text-success text-center small mt-2" id="info-kirim"></div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-body-secondary py-4 small">© 2026 Sakuin</footer>
+
+  <script src="assets/lib/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/landing.js"></script>
+</body>
+</html>
