@@ -87,11 +87,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-success {
-  --bs-btn-bg: var(--hijau-tua);
-  --bs-btn-border-color: var(--hijau-tua);
-  --bs-btn-hover-bg: #0a5039;
-  --bs-btn-hover-border-color: #0a5039;
-  --bs-btn-active-bg: #0a5039;
+  --bs-nav-link-color: var(--bs-body-color);
+  --bs-nav-link-hover-color: #198754;
+  --bs-nav-pills-link-active-bg: #198754;
 }
 
 /* Sidebar: gradien hijau lembut, menu aktif beraksen emas */
@@ -140,3 +138,46 @@ h1, h2, h3, h4, h5 {
   background-color: var(--hijau-tua);
   border-color: var(--hijau-tua);
 }
+
+/* Kartu: jumlah kolom menyesuaikan lebar layar secara otomatis */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+/* Efek zoom saat kartu di-hover */
+.cards .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Kartu tim: rata tengah, lebar tetap */
+.tim {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tim .card {
+  width: 260px;
+}
+.cards .card,
+.tim .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards .card:hover,
+.tim .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
