@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pengaturan – Sakuin</title>
+  <link rel="icon" href="../assets/img/logo.png">
+  <link rel="stylesheet" href="../assets/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/lib/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body data-halaman="pengaturan">
+  <div class="layout">
+
+    <!-- SIDEBAR: menu di sisi kiri -->
+    <aside class="sidebar p-3">
+      <a href="dashboard.html" class="d-flex align-items-center gap-2 text-decoration-none text-success mb-4">
+        <img src="../assets/img/logo.png" width="36" alt="">
+        <b class="fs-4">Sakuin</b>
+      </a>
+
+      <nav class="nav nav-pills flex-column gap-1">
+        <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+        <a class="nav-link" href="transaksi.html"><i class="bi bi-arrow-left-right me-2"></i>Transaksi</a>
+        <a class="nav-link" href="kategori.html"><i class="bi bi-tags me-2"></i>Kategori</a>
+        <a class="nav-link" href="anggaran.html"><i class="bi bi-pie-chart me-2"></i>Anggaran</a>
+        <a class="nav-link" href="tabungan.html"><i class="bi bi-piggy-bank me-2"></i>Tabungan</a>
+        <a class="nav-link" href="laporan.html"><i class="bi bi-file-earmark-text me-2"></i>Laporan</a>
+        <a class="nav-link active mt-auto" href="pengaturan.html"><i class="bi bi-gear me-2"></i>Pengaturan</a>
+      </nav>
+    </aside>
+
+    <div class="konten">
+
+      <!-- TOPBAR: judul halaman dan menu pengguna -->
+      <header class="d-flex justify-content-between align-items-center border-bottom px-4 py-3">
+        <h4 class="m-0">Pengaturan</h4>
+
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center gap-2 text-decoration-none text-body dropdown-toggle" data-bs-toggle="dropdown">
+            <img id="foto-user" class="avatar" alt="Foto">
+            <span id="nama-user" class="fw-semibold"></span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li class="px-3 py-2">
+              <b id="menu-nama"></b><br>
+              <small class="text-body-secondary" id="menu-username"></small>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+            <li><a class="dropdown-item" href="pengaturan.html">Pengaturan</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="../auth/login.html?logout=1">Logout</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- ISI HALAMAN -->
+      <main class="p-4">
+        <div class="card mx-auto" style="max-width: 640px"><div class="card-body">
+          <h5 class="mb-3">Pengaturan</h5>
+
+          <!-- Notifikasi -->
+          <div class="d-flex justify-content-between align-items-center py-3 border-top">
+            <span>Notifikasi</span>
+            <div class="d-flex align-items-center gap-3">
+              <b id="label-notif">ON</b>
+              <div class="form-check form-switch m-0">
+                <input class="form-check-input" type="checkbox" id="saklar-notif" role="switch">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tampilan -->
+          <div class="d-flex justify-content-between align-items-center py-3 border-top">
+            <span>Tampilan</span>
+            <div class="btn-group">
+              <button class="btn btn-outline-success" id="tema-gelap">Dark</button>
+              <button class="btn btn-outline-success" id="tema-terang">Light</button>
+            </div>
+          </div>
+
+          <!-- Keamanan -->
+          <div class="d-flex justify-content-between align-items-center py-3 border-top">
+            <span>Keamanan</span>
+            <button class="btn btn-outline-success btn-sm" onclick="bukaModal('modal-password')">Ubah Password</button>
+          </div>
+
+          <!-- Bahasa -->
+          <div class="d-flex justify-content-between align-items-center py-3 border-top">
+            <span>Bahasa</span>
+            <select class="form-select w-auto"><option>Indonesia</option></select>
+          </div>
+
+          <a class="btn btn-outline-danger w-100 mt-3" href="../auth/login.html?logout=1">Logout</a>
+        </div></div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Modal ubah password -->
+  <div class="modal fade" id="modal-password" tabindex="-1">
+    <div class="modal-dialog">
+      <form class="modal-content" id="form-password">
+        <div class="modal-header">
+          <h5 class="modal-title">Ubah Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <label class="form-label">Password lama *</label>
+          <input class="form-control mb-3" type="password" name="lama" required>
+
+          <label class="form-label">Password baru *</label>
+          <input class="form-control mb-3" type="password" name="baru" required minlength="6">
+
+          <label class="form-label">Konfirmasi password baru *</label>
+          <input class="form-control" type="password" name="konfirmasi" required>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+          <button class="btn btn-success">Simpan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/lib/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/pengaturan.js"></script>
+</body>
+</html>
